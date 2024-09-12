@@ -1,0 +1,4 @@
+<mujoco>
+  <compiler meshdir="./mesh"/>
+  <worldbody>
+    <body name="Gear_1" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">

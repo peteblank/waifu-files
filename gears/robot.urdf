@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<robot name="moving3">
+
+  <!-- Define links with meshes and properties -->
+  <link name="FabConvert.com_gear_1">
+    <visual>
+      <geometry>
+        <mesh filename="FabConvert.com_gear_1.obj"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="-1.0890698432922363 0.0 0.0"/>
+      <material name="gear1_material">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="FabConvert.com_gear_1.obj"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="-1.0890698432922363 0.0 0.0"/>
+    </collision>
+  </link>
+
+  <link name="FabConvert.com_gear_2">
+    <visual>
+      <geometry>
+        <mesh filename="FabConvert.com_gear_2.obj"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="-26.642738342285156 -0.08491900563240051 -0.19510163366794586"/>
+      <material name="gear2_material">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="FabConvert.com_gear_2.obj"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="-26.642738342285156 -0.08491900563240051 -0.19510163366794586"/>
+    </collision>
+  </link>
+
+  <!-- Define joints -->
+  <joint name="gear_joint_1" type="revolute">
+    <origin rpy="0 0 0" xyz="-1 -1 -1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="0" upper="6.28319" velocity="1"/>
+    <parent link="world"/>
+    <child link="FabConvert.com_gear_1"/>
+  </joint>
+
+  <joint name="gear_joint_2" type="revolute">
+    <origin rpy="0 0 0" xyz="-26.642738342285156 -0.08491900563240051 -0.19510163366794586"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="0" upper="6.28319" velocity="1"/>
+    <parent link="world"/>
+    <child link="FabConvert.com_gear_2"/>
+  </joint>
+
+  <!-- Dummy joint constraint for gear interaction -->
+  <!-- Real gear constraints and interactions would need to be implemented in control software or through a plugin -->
+
+  <!-- Actuators are not directly represented in URDF but can be controlled through plugins or control interfaces -->
+  
+</robot>

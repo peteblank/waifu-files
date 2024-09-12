@@ -1,0 +1,19 @@
+<mujoco model="FabConvert.com_back_ring_holder">
+  <default>
+    <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <mesh file="FabConvert.com_back_ring_holder.obj"/>
+  </asset>
+  <worldbody>
+    <body name="FabConvert.com_back_ring_holder">
+      <geom mesh="FabConvert.com_back_ring_holder" class="visual"/>
+      <geom mesh="FabConvert.com_back_ring_holder" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>

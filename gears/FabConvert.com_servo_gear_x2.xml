@@ -1,0 +1,19 @@
+<mujoco model="FabConvert.com_servo_gear_x2">
+  <default>
+    <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <mesh file="FabConvert.com_servo_gear_x2.obj"/>
+  </asset>
+  <worldbody>
+    <body name="FabConvert.com_servo_gear_x2">
+      <geom mesh="FabConvert.com_servo_gear_x2" class="visual"/>
+      <geom mesh="FabConvert.com_servo_gear_x2" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>

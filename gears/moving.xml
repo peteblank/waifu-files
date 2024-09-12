@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<mujoco model="moving3">
+  <default>
+    <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <mesh file="FabConvert.com_gear_1.obj"/>
+    <mesh file="FabConvert.com_gear_2.obj"/>
+  </asset>
+  <worldbody>
+    <body name="FabConvert.com_gear_1">
+      <joint name="gear_joint_1" type="hinge" pos="-1 -1 -1" axis="0 0 1" stiffness="0" range="0 360"/>
+      <geom type="mesh" mesh="FabConvert.com_gear_1" class="visual" quat="4.371138828673793e-08 -1.0 -0.0 -0.0" pos="-1.0890698432922363 0.0 0.0" rgba="1.0 1.0 1.0 1.0"/>
+      <geom type="mesh" mesh="FabConvert.com_gear_1" class="collision" quat="4.371138828673793e-08 -1.0 -0.0 -0.0" pos="-1.0890698432922363 0.0 0.0"/>
+    </body>
+    <body name="FabConvert.com_gear_2">
+      <joint name="gear_joint_2" type="hinge" pos="-26.642738342285156 -0.08491900563240051 -0.19510163366794586" axis="0 0 1" stiffness="0" range="0 360"/>
+      <geom type="mesh" mesh="FabConvert.com_gear_2" class="visual" quat="0.0054664392955601215 0.9835273027420044 0.1791350096464157 -0.023555144667625427" pos="-26.642738342285156 -0.08491900563240051 -0.19510163366794586" rgba="1.0 1.0 1.0 1.0"/>
+      <geom type="mesh" mesh="FabConvert.com_gear_2" class="collision" quat="0.0054664392955601215 0.9835273027420044 0.1791350096464157 -0.023555144667625427" pos="-26.642738342285156 -0.08491900563240051 -0.19510163366794586"/>
+      <site name="gear2_center" pos="0 0 0"/>
+      
+      <!-- Dummy constraint to simulate gear interaction -->
+ 
+    </body>
+    
+  </worldbody>
+  <actuator>
+    <motor joint="gear_joint_1" ctrlrange="-1 1" gear="1"/>
+  </actuator>
+</mujoco>

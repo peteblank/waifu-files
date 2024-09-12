@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<mujoco model="moving">
+  <default>
+    <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <mesh file="FabConvert.com_gear_1.obj"/>
+    <mesh file="FabConvert.com_gear_2.obj"/>
+  </asset>
+  <worldbody>
+    <body name="FabConvert.com_gear_1" pos="0 0 0">
+      <geom type="mesh" mesh="FabConvert.com_gear_1" class="visual" quat="4.371138828673793e-08 -1.0 -0.0 -0.0" pos="0.0 0.0 0.0" rgba="1.0 1.0 1.0 1.0"/>
+      <geom type="mesh" mesh="FabConvert.com_gear_1" class="collision" quat="4.371138828673793e-08 -1.0 -0.0 -0.0" pos="0.0 0.0 0.0"/>
+      <!-- Define the joint connecting this body to the next -->
+      <joint name="gear_joint" type="hinge" pos="0 0 0" axis="0 0 1"/>
+    </body>
+    <body name="FabConvert.com_gear_2" pos="-26.642738342285156 -0.08491900563240051 -0.19510163366794586">
+      <geom type="mesh" mesh="FabConvert.com_gear_2" class="visual" quat="0.0154664392955601215 0.9835273027420044 0.1791350096464157 -0.023555144667625427" pos="0 0 0 " rgba="1.0 1.0 1.0 1.0"/>
+      <geom type="mesh" mesh="FabConvert.com_gear_2" class="collision" quat="0.0154664392955601215 0.9835273027420044 0.1791350096464157 -0.023555144667625427" pos="0 0 "/>
+      <!-- This body doesn't need its own joint -->
+      <joint name="gear_joint2" type="hinge" pos="0 0 0" axis="0 0 1"/>
+    </body>
+  </worldbody>
+  <actuator>
+    <!-- Define a motor actuator for the joint -->
+    <motor joint="gear_joint"  ctrlrange="-1 1" gear="1"/>
+  </actuator>
+</mujoco>

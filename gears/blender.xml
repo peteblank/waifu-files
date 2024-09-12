@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<mujoco model="test">
+  <default>
+    <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <mesh file="FabConvert.com_gear_1.obj"/>
+    <mesh file="FabConvert.com_gear_2.obj"/>
+  </asset>
+  <worldbody>
+    <body name="FabConvert.com_gear_1">
+      <geom type="mesh" mesh="FabConvert.com_gear_1" class="visual" quat="0.0 1.0 0.0 0.0" pos="0.0 0.0 0.0"  rgba="1.0 1.0 1.0 1.0"/>
+      <geom type="mesh" mesh="FabConvert.com_gear_1" class="collision" quat="0.0 1.0 0.0 0.0" pos="0.0 0.0 0.0" />
+    </body>
+    <body name="FabConvert.com_gear_2">
+      <geom type="mesh" mesh="FabConvert.com_gear_2" class="visual" quat="0.08081357926130295 -0.9954349994659424 -0.050679851323366165 -0.0031474430579692125" pos="25.889986038208008 0.0 0.0"  rgba="1.0 1.0 1.0 1.0"/>
+      <geom type="mesh" mesh="FabConvert.com_gear_2" class="collision" quat="0.08081357926130295 -0.9954349994659424 -0.050679851323366165 -0.0031474430579692125" pos="25.889986038208008 0.0 0.0" />
+    </body>
+  </worldbody>
+  <actuator>
+  </actuator>
+  <tendon>
+  </tendon>
+</mujoco>

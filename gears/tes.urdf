@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="simple_robot">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="1 1 1"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="default">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="1 1 1"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+  </link>
+  <joint name="base_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+</robot>

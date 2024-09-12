@@ -1,0 +1,19 @@
+<mujoco model="FabConvert.com_back_cover_sphere">
+  <default>
+    <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <mesh file="FabConvert.com_back_cover_sphere.obj"/>
+  </asset>
+  <worldbody>
+    <body name="FabConvert.com_back_cover_sphere">
+      <geom mesh="FabConvert.com_back_cover_sphere" class="visual"/>
+      <geom mesh="FabConvert.com_back_cover_sphere" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>
